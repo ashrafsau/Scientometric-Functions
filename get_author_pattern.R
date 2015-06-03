@@ -4,7 +4,7 @@ get_author_pattern<-function(author_, year_, author_separator){
   
   if(length(author_)!=length(year_))stop("author_ and year_ are not of same length!")
   if(mode(year_)!="numeric")stop("year_ must be numeric!")
-  
+  # load library
   library(stringr)  
   no.of.authors<-sapply(X=str_split(author_,author_separator),FUN=length)
   max.authors<-max(no.of.authors)
